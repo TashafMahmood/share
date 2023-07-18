@@ -1,12 +1,11 @@
 import React from 'react';
+import Button from './Button';
 
 const App = () => {
   const handleClick = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'My App',
-          text: 'Check out this amazing app!',
           url: window.location.href
         });
         console.log('Successfully shared!');
@@ -21,7 +20,7 @@ const App = () => {
   return (
     <div>
       <h1>My App</h1>
-      <button onClick={handleClick}>Share</button>
+      <Button onClick={handleClick} text="Share" />
     </div>
   );
 };
