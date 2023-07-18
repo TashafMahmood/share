@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 
 const App = () => {
   const handleClick = async () => {
@@ -20,7 +19,7 @@ const App = () => {
   return (
     <div>
       <h1>My App</h1>
-      <Button onClick={handleClick} text="Share" />
+      <button onClick={handleClick}>Share it</button>
     </div>
   );
 };
